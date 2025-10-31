@@ -24,11 +24,14 @@ package edu.sdmesa.cisc191;
  *
  * GameResult is-a ...
  * GameResult is ...
- */
+MIGHT REMOVE THIS CLASS COMPLETELY NOT SURE YET
 public class GameResult
 {
-	private String xWins;
-	private String oWins;
-	private String draw;
-	private String ongoing;
+	private GameValidator validator;
+	
+	public String result(String gameResult)
+	{
+		
+	}
 }
+*/

@@ -36,7 +36,7 @@ public class Game
 	
 	public void play()
 	{
-		
+		new Board();
 	}
 	
 	public void switchPlayer()
