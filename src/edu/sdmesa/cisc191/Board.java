@@ -52,7 +52,7 @@ public class Board
 	}
 	
 	//iterates through the grid and if a spot is empty then the row and col will be saved into a linked list
-	public LinkedList getAvailableMoves()
+	public LinkedList<String> getAvailableMoves()
 	{
 		//iterates through grid in row-major order
 		for(int row = 0; row < grid.length; row++)
