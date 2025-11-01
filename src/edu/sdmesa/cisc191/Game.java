@@ -1,7 +1,7 @@
 /**
 * Lead Author(s):
 * @author Kevin Plascencia
-* @author Full name; student ID
+* @author Michelle; student ID
 * <<Add additional lead authors here>>
 *
 * Other Contributors:

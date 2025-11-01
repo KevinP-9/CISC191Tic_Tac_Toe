@@ -1,7 +1,7 @@
 /**
 * Lead Author(s):
 * @author kevin; student ID
-* @author Full name; student ID
+* @author Michelle Khaliqi; student ID
 * <<Add additional lead authors here>>
 *
 * Other Contributors:
@@ -40,5 +40,6 @@ public class HumanPlayer implements Player
 	{
 		return 0;
 	}
+	
 	
 }

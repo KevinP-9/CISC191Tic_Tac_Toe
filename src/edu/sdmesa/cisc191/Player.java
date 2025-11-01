@@ -1,7 +1,7 @@
 /**
 * Lead Author(s):
 * @author kevin; student ID
-* @author Full name; student ID
+* @author Michelle Khaliqi; student ID
 * <<Add additional lead authors here>>
 *
 * Other Contributors:
@@ -29,4 +29,6 @@ public interface Player
 {
 	public Move getMove(Board board);
 	public char getMark();
+	
+	
 }
