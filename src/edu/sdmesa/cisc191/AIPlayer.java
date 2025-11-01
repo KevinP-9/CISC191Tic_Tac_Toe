@@ -1,12 +1,9 @@
 /**
 * Lead Author(s):
-* @author kevin; student ID
-* @author Full name; student ID
-* <<Add additional lead authors here>>
+* @author Kevin Plascencia; student ID
+* @author Michelle Khaliqi; student ID
 *
 * Other Contributors:
-* Full name; student ID or contact information if not in class
-* <<Add additional contributors (mentors, tutors, friends) here, with contact information>>
 *
 * References:
 * Morelli, R., & Walde, R. (2016).

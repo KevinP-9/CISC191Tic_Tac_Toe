@@ -1,19 +1,14 @@
 /**
 * Lead Author(s):
-* @author kevin; student ID
-* @author Full name; student ID
-* <<Add additional lead authors here>>
+* @author Kevin Plascencia; student ID
+* @author Michelle; student ID
 *
 * Other Contributors:
-* Full name; student ID or contact information if not in class
-* <<Add additional contributors (mentors, tutors, friends) here, with contact information>>
 *
 * References:
 * Morelli, R., & Walde, R. (2016).
 * Java, Java, Java: Object-Oriented Problem Solving
 * https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
-*
-* <<Add more references here>>
 *
 * Version: 2025-10-28
 */
@@ -27,20 +22,23 @@ package edu.sdmesa.cisc191;
  */
 public class Move
 {
-	private int row;
-	private int col;
+	private int row; //Move has-a row
+	private int col; //Move has-a col
 	
+	//constructor that sets our instance variables
 	public Move(int row, int col)
 	{
 		this.row = row;
 		this.col = col;
 	}
 	
+	//getter method for row
 	public int getRow()
 	{
 		return row;
 	}
 	
+	//getter method for col
 	public int getCol()
 	{
 		return col;
