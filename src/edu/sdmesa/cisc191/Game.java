@@ -18,6 +18,7 @@
 package edu.sdmesa.cisc191;
 
 import java.util.LinkedList;
+import java.util.Arrays;
 
 /**
  * Purpose: The reponsibility of Game is ...
@@ -27,20 +28,40 @@ import java.util.LinkedList;
  */
 public class Game
 {
-	private Board board;
-	private Player playerX;
-	private Player playerO;
+	private static Board board;
+	private HumanPlayer playerX;
+	private HumanPlayer playerO;
 	private Player currentPlayer;
-	private GameValidator validator;
+	private static GameValidator validator;
 	private LinkedList<Move> moveHistory;
 	
-	public void play()
+	public Game(Board gameBoard)
 	{
-		new Board();
+		board = gameBoard;
+		validator = new GameValidator();
 	}
 	
 	public void switchPlayer()
 	{
-		
+		if(currentPlayer == playerX)
+		{
+			
+		}
+			
+	}
+	public static void main(String[] args)
+	{
+		/* TESTING GAME LOGIC
+		Board board = new Board();
+		Game game = new Game(board);
+		System.out.println(Arrays.deepToString(board.getGrid()));
+		System.out.println(game.validator.check(board));
+		board.getGrid()[0][0] = 'X';
+		board.getGrid()[0][1] = 'X';
+		board.getGrid()[0][2] = 'X';
+		System.out.println(Arrays.deepToString(board.getGrid()));
+		System.out.println(game.validator.check(board));
+		*/
+	
 	}
 }

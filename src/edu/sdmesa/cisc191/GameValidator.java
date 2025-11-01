@@ -28,11 +28,12 @@ package edu.sdmesa.cisc191;
 public class GameValidator
 {
 	Board board; //GameValidator has-a relationship with Board
-	private char[][] grid = board.getGrid(); //GameValidator has-a copy of our board grid
 	
 	//checks for every possible outcome (win, draw, or ongoing)
 	public String check(Board board)
 	{
+		//every time check is run the grid will be an updated version
+		char[][] grid = board.getGrid();
 		//checks all 11 possibilities of X winning
 		if((grid[0][0] == 'X' && grid[0][1] == 'X' && grid[0][2] == 'X') || (grid[1][0] == 'X' && grid[1][1] == 'X' && grid[1][2] == 'X') || (grid[2][0] == 'X' && grid[2][1] == 'X' && grid[2][2] == 'X') || 
 			(grid[0][0] == 'X' && grid[1][0] == 'X' && grid[2][0] == 'X') || (grid[0][1] == 'X' && grid[1][1] == 'X' && grid[2][1] == 'X')	|| (grid[0][2] == 'X' && grid[1][2] == 'X' && grid[2][2] == 'X') ||

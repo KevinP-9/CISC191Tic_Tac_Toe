@@ -28,6 +28,7 @@ package edu.sdmesa.cisc191;
 public class HumanPlayer implements Player
 {
 	private char mark;
+	Move move;
 	
 	@Override
 	public Move getMove(Board board)
