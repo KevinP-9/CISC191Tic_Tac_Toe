@@ -20,26 +20,38 @@
 package edu.sdmesa.cisc191;
 
 /**
- * Purpose: The reponsibility of HumanPlayer is ...
- *
- * HumanPlayer is-a ...
- * HumanPlayer is ...
+ * Purpose: The responsibility of HumanPlayer is to be a human player for TicTacToe 
  */
+//HumanPlayer is player
 public class HumanPlayer implements Player
 {
-	private char mark;
-	Move move;
+	private char mark; //HumanPlayer has-a mark
+	Move move; //HumanPlayer has-a move
 	
+	//constructor that sets a player's mark
+	public HumanPlayer(char mark)
+	{
+		this.mark = mark;
+	}
+
+	//returns move
 	@Override
 	public Move getMove(Board board)
 	{
-		return null;
+		return move;
 	}
-
+	
+	//sets move
+	public void setMove(Move move)
+	{
+		this.move = move;
+	}
+	
+	//returns mark
 	@Override
 	public char getMark()
 	{
-		return 0;
+		return mark;
 	}
 	
 	

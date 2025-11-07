@@ -1,7 +1,7 @@
 /**
 * Lead Author(s):
 * @author Kevin Plascencia; student ID
-* @author Michelle; student ID
+* @author Michelle Khaliqi; student ID
 *
 * Other Contributors:
 *
@@ -15,32 +15,49 @@
 package edu.sdmesa.cisc191;
 
 /**
- * Purpose: The reponsibility of Move is ...
- *
- * Move is-a ...
- * Move is ...
+ * Purpose: The responsibility of Move is to be the moves that the players do
  */
 public class Move
 {
 	private int row; //Move has-a row
 	private int col; //Move has-a col
+	private char mark; //Move has-a mark
 	
 	//constructor that sets our instance variables
-	public Move(int row, int col)
+	public Move(int row, int col, char mark)
 	{
 		this.row = row;
 		this.col = col;
+		this.mark = mark;
 	}
 	
-	//getter method for row
+	//returns row
 	public int getRow()
 	{
 		return row;
 	}
 	
-	//getter method for col
+	//returns col
 	public int getCol()
 	{
 		return col;
+	}
+	
+	//sets row
+	public void setRow(int row)
+	{
+		this.row = row; 
+	}
+	
+	//sets col
+	public void setCol(int col)
+	{
+		this.col = col;
+	}
+	
+	//returns mark
+	public char getMark()
+	{
+		return mark;
 	}
 }

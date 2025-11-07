@@ -21,6 +21,7 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -34,11 +35,29 @@ import javax.swing.JPanel;
 public class TicTacToeGUI extends JFrame{
 
 	//Displays the 3x3 grid buttons on the screen for user to interact with
-	private JButton[][] buttons = new JButton[3][3]; 
-	
+	private MarkButton[][] buttons = new MarkButton[3][3];
+	private Game game; //TicTacToeGUI has-a game
+	private Board board; //TicTacToeGUI has-a board
+	private Move move; //TicTacToeGUI has-many moves
 	
 	public TicTacToeGUI() {
 		//Main frame setup
+		String[] options = {"Human vs Human", "Human vs AI"}; //options that will be used for our option pane
+		//creates an option pane where the user picks whether they will go against a human or ai player
+		int mode = JOptionPane.showOptionDialog(this, "Choose game mode: ", "Game Setup", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+		board = new Board(); //new board instance
+		Player playerX = new HumanPlayer('X'); //Player X is always a human player
+		Player playerO;
+		//if human player option is selected then Player O will be a human player, else it will be an AIPlayer
+		if(mode == 0)
+		{
+			playerO = new HumanPlayer('O');
+		}
+		else
+		{
+			playerO = new AIPlayer('O');
+		}
+		this.game = new Game(board, playerX, playerO); //creates a game instance using the board and players
 		this.setTitle("Tic Tac Toe Game");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(800, 800);
@@ -63,7 +82,7 @@ public class TicTacToeGUI extends JFrame{
 		for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
                
-            	buttons[row][col] = new JButton(""); // empty for now, will have X or O behind each button
+            	buttons[row][col] = new MarkButton(row, col, game); // empty for now, will have X or O behind each button
                 buttons[row][col].setFont(new Font("Arial", Font.BOLD, 60));
                 buttonPanel.add(buttons[row][col]);
                 

@@ -16,15 +16,13 @@
 package edu.sdmesa.cisc191;
 
 /**
- * Purpose: The reponsibility of Player is ...
- *
- * Player is-a ...
- * Player is ...
+ * Purpose: The responsibility of Player is to be an interface for the game players
  */
 public interface Player
 {
+	//returns player move
 	public Move getMove(Board board);
+	//returns player mark
 	public char getMark();
-	
 	
 }

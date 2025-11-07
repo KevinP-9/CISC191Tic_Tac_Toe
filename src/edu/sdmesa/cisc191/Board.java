@@ -1,7 +1,7 @@
 /**
 * Lead Author(s):
 * @author Kevin Plascencia; student ID
-* @author Michelle; student ID
+* @author Michelle Khaliqi; student ID
 *
 * Other Contributors: 
 *
@@ -17,9 +17,6 @@ import java.util.LinkedList;
 
 /**
  * Purpose: The responsibility of Board is to be a 3x3 grid for Tic-Tac-Toe
- *
- * Board is-a ...
- * Board is ...
  */
 public class Board
 {
@@ -41,9 +38,9 @@ public class Board
 	}
 	
 	//sets the empty grid value to a player mark
-	public void applyMove(Move move, char mark)
+	public void applyMove(Move move)
 	{
-		grid[move.getRow()][move.getCol()] = mark;
+		grid[move.getRow()][move.getCol()] = move.getMark();
 	}
 	
 	//iterates through the grid and if a spot is empty then the row and col will be saved into a linked list
@@ -89,11 +86,6 @@ public class Board
 		return true;
 	}
 	
-	public void printBoard()
-	{
-		
-	}
-	
 	//rests the entire board by setting every cell to an empty space
 	public void reset()
 	{
@@ -108,7 +100,7 @@ public class Board
 		}
 	}
 	
-	//getter method for our grid
+	//returns grid
 	public char[][] getGrid()
 	{
 		return grid;

@@ -16,10 +16,7 @@
 package edu.sdmesa.cisc191;
 
 /**
- * Purpose: The reponsibility of GameValidator is to check the state of the board
- *
- * GameValidator is-a ...
- * GameValidator is ...
+ * Purpose: The responsibility of GameValidator is to check the state of the board
  */
 public class GameValidator
 {

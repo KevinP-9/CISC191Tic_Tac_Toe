@@ -29,6 +29,15 @@ public class AIPlayer implements Player
 	private char mark;
 	private Random random;
 	
+	/**
+	 * Purpose: 
+	 * @param c
+	 */
+	public AIPlayer(char c)
+	{
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public Move getMove(Board board)
 	{
