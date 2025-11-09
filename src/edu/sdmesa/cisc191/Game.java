@@ -86,6 +86,7 @@ public class Game
 	public Board getBoard()
 	{
 		// TODO Auto-generated method stub
+		validator.check(board);
 		return board;
 		
 	}

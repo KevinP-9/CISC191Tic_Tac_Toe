@@ -15,6 +15,8 @@
 */
 package edu.sdmesa.cisc191;
 
+import javax.swing.JOptionPane;
+
 /**
  * Purpose: The responsibility of GameValidator is to check the state of the board
  */
@@ -25,6 +27,14 @@ public class GameValidator
 	//checks for every possible outcome (win, draw, or ongoing)
 	public String check(Board board)
 	{
+		
+//		//Pop up messages for when the game is over testing if it works...
+//		JOptionPane.showMessageDialog(null, "Game Over- Player X Wins!");
+//		JOptionPane.showMessageDialog(null, "Game Over- Player O Wins!");
+//		JOptionPane.showMessageDialog(null, "Game Over- It's a Draw!");
+
+		
+		
 		//every time check is run the grid will be an updated version
 		char[][] grid = board.getGrid();
 		//checks all 11 possibilities of X winning
@@ -32,6 +42,7 @@ public class GameValidator
 			(grid[0][0] == 'X' && grid[1][0] == 'X' && grid[2][0] == 'X') || (grid[0][1] == 'X' && grid[1][1] == 'X' && grid[2][1] == 'X')	|| (grid[0][2] == 'X' && grid[1][2] == 'X' && grid[2][2] == 'X') ||
 			(grid[0][0] == 'X' && grid[1][1] == 'X' && grid[2][2] == 'X') || (grid[0][2] == 'X' && grid[1][1] == 'X' && grid[2][0] == 'X'))
 		{
+			JOptionPane.showMessageDialog(null, "Game Over- Player X Wins!");
 			return "Player X has won, Player O has lost.";
 		}
 		//checks all 11 possibilities of O winning
@@ -39,13 +50,16 @@ public class GameValidator
 				(grid[0][0] == 'O' && grid[1][0] == 'O' && grid[2][0] == 'O') || (grid[0][1] == 'O' && grid[1][1] == 'O' && grid[2][1] == 'O')	|| (grid[0][2] == 'O' && grid[1][2] == 'O' && grid[2][2] == 'O') ||
 				(grid[0][0] == 'O' && grid[1][1] == 'O' && grid[2][2] == 'O') || (grid[0][2] == 'O' && grid[1][1] == 'O' && grid[2][0] == 'O'))
 		{
+			JOptionPane.showMessageDialog(null, "Game Over- Player O Wins!");
 			return "Player O has won, Player X has lost.";
 		}
 		//if no one has won yet and the board is full then the game must be a draw
 		else if(board.isFull())
 		{
+			JOptionPane.showMessageDialog(null, "Game Over- It's a Draw!");
 			return "The game has come to a draw.";
 		}
+		//JOptionPane.showMessageDialog(null, "Game Over- It's a Draw!");
 		//if no one has won yet and the board isn't full yet then it must be ongoing
 		return "The game is still ongoing.";
 	}
