@@ -90,4 +90,10 @@ public class Game
 		return board;
 		
 	}
+	
+	public GameValidator getGameValidator() {
+		return validator;
+	}
+	
+	
 }
