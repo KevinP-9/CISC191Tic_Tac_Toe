@@ -64,6 +64,7 @@ public class MarkButton extends JButton implements ActionListener
 			move = new Move(row, column, mark);
 			game.getBoard().applyMove(move);
 			game.switchPlayer();
+			game.getGameValidator().check(game.getBoard());
 		}
 		//if it isn't an empty space(meaning it already has a mark) then button will be disabled from being pressed again to avoid turn issues
 		else

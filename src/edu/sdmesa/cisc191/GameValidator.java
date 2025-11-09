@@ -42,6 +42,7 @@ public class GameValidator
 			(grid[0][0] == 'X' && grid[1][0] == 'X' && grid[2][0] == 'X') || (grid[0][1] == 'X' && grid[1][1] == 'X' && grid[2][1] == 'X')	|| (grid[0][2] == 'X' && grid[1][2] == 'X' && grid[2][2] == 'X') ||
 			(grid[0][0] == 'X' && grid[1][1] == 'X' && grid[2][2] == 'X') || (grid[0][2] == 'X' && grid[1][1] == 'X' && grid[2][0] == 'X'))
 		{
+			//pop up will show the message, if the game ends with Player X wins
 			JOptionPane.showMessageDialog(null, "Game Over- Player X Wins!");
 			return "Player X has won, Player O has lost.";
 		}
@@ -50,12 +51,14 @@ public class GameValidator
 				(grid[0][0] == 'O' && grid[1][0] == 'O' && grid[2][0] == 'O') || (grid[0][1] == 'O' && grid[1][1] == 'O' && grid[2][1] == 'O')	|| (grid[0][2] == 'O' && grid[1][2] == 'O' && grid[2][2] == 'O') ||
 				(grid[0][0] == 'O' && grid[1][1] == 'O' && grid[2][2] == 'O') || (grid[0][2] == 'O' && grid[1][1] == 'O' && grid[2][0] == 'O'))
 		{
+			//pop up will show the message, if the game ends with Player O wins
 			JOptionPane.showMessageDialog(null, "Game Over- Player O Wins!");
 			return "Player O has won, Player X has lost.";
 		}
 		//if no one has won yet and the board is full then the game must be a draw
 		else if(board.isFull())
 		{
+			//pop up will show the message, if the game ends with a draw
 			JOptionPane.showMessageDialog(null, "Game Over- It's a Draw!");
 			return "The game has come to a draw.";
 		}
