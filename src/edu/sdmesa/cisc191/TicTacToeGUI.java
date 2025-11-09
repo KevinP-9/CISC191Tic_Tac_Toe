@@ -57,7 +57,9 @@ public class TicTacToeGUI extends JFrame{
 		{
 			playerO = new AIPlayer('O');
 		}
+		
 		this.game = new Game(board, playerX, playerO); //creates a game instance using the board and players
+		//Frame Setup
 		this.setTitle("Tic Tac Toe Game");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(800, 800);
@@ -111,6 +113,5 @@ public class TicTacToeGUI extends JFrame{
         new TicTacToeGUI();
         
     }
-   
 }
 
