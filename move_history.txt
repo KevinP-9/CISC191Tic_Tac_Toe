@@ -1,0 +1,7 @@
+Player X placed their mark at row: 1 and col: 1, 
+Player O placed their mark at row: 1 and col: 2, 
+Player X placed their mark at row: 2 and col: 2, 
+Player O placed their mark at row: 2 and col: 1, 
+Player X placed their mark at row: 0 and col: 2, 
+Player O placed their mark at row: 0 and col: 1, 
+Player X placed their mark at row: 0 and col: 0, 

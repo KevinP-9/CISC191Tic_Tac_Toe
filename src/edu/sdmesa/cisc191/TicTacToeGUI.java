@@ -15,6 +15,7 @@
 package edu.sdmesa.cisc191;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 
@@ -95,6 +96,19 @@ public class TicTacToeGUI extends JFrame{
 		//want tic tac toe grid in the center of the layout
         this.add(buttonPanel, BorderLayout.CENTER);
         
+        //south panel that will have its own border layout so we can put the button above the label
+        JPanel southPanel = new JPanel();
+        southPanel.setLayout(new BorderLayout());
+        
+        //create panel for move history button and its button
+        JPanel moveHistoryPanel = new JPanel();
+        JButton moveHistoryButton = new JButton("Move History");
+        moveHistoryButton.setPreferredSize(new Dimension(250, 35));
+        //moveHistoryButton action listener which creates, writes, and opens the file
+        moveHistoryButton.addActionListener(e -> {
+        	game.MoveHistoryFile();
+        	});
+        moveHistoryPanel.add(moveHistoryButton);
         
         //create panel for names, programmers of the game
         JPanel namesPanel = new JPanel();
@@ -102,8 +116,10 @@ public class TicTacToeGUI extends JFrame{
         namesLabel.setFont(new Font("Arial", Font.PLAIN, 18));
         namesPanel.add(namesLabel);
         
+        southPanel.add(moveHistoryPanel, BorderLayout.NORTH);
+        southPanel.add(namesPanel, BorderLayout.SOUTH);
 		//want names on the bottom (South) of the layout
-        this.add(namesPanel, BorderLayout.SOUTH);
+        this.add(southPanel, BorderLayout.SOUTH);
 
         this.setVisible(true);
         
@@ -111,7 +127,6 @@ public class TicTacToeGUI extends JFrame{
 	
     public static void main(String[] args) {
         new TicTacToeGUI();
-        
     }
 }
 

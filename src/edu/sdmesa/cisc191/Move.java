@@ -60,4 +60,10 @@ public class Move
 	{
 		return mark;
 	}
+	
+	//toString method that gives info about a move's mark, row, and col
+	public String toString()
+	{
+		return "Player " + mark + " placed their mark on row " + row + " and col " + col + ".";
+	}
 }

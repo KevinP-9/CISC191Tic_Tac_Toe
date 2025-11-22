@@ -63,6 +63,7 @@ public class MarkButton extends JButton implements ActionListener
 			this.setText(Character.toString(mark));
 			move = new Move(row, column, mark);
 			game.getBoard().applyMove(move);
+			game.addMoveToList(move);
 			game.switchPlayer();
 			game.getGameValidator().check(game.getBoard());
 		}
