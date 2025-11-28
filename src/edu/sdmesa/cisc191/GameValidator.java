@@ -26,15 +26,7 @@ public class GameValidator
 	
 	//checks for every possible outcome (win, draw, or ongoing)
 	public String check(Board board)
-	{
-		
-//		//Pop up messages for when the game is over testing if it works...
-//		JOptionPane.showMessageDialog(null, "Game Over- Player X Wins!");
-//		JOptionPane.showMessageDialog(null, "Game Over- Player O Wins!");
-//		JOptionPane.showMessageDialog(null, "Game Over- It's a Draw!");
-
-		
-		
+	{	
 		//every time check is run the grid will be an updated version
 		char[][] grid = board.getGrid();
 		//checks all 11 possibilities of X winning

@@ -21,7 +21,6 @@ import java.util.LinkedList;
 public class Board
 {
 	private char[][] grid = new char[3][3]; //Board has-a 3x3  grid
-	private LinkedList<String> availableMoveList; //Board has-a LinkedList of available moves
 
 	//constructor that fills up the entire grid with an empty space
 	public Board() 
@@ -46,6 +45,7 @@ public class Board
 	//iterates through the grid and if a spot is empty then the row and col will be saved into a linked list
 	public LinkedList<String> getAvailableMoves()
 	{
+		LinkedList<String> availableMoveList = new LinkedList<>(); //Board has-a LinkedList of available moves
 		//iterates through grid in row-major order
 		for(int row = 0; row < grid.length; row++)
 		{

@@ -16,18 +16,16 @@
 */
 package edu.sdmesa.cisc191;
 
-import java.util.Random;
-
 /**
- * Purpose: The reponsibility of AIPlayer is ...
+ * Purpose: The responsibility of AIPlayer is ...
  *
  * AIPlayer is-a ...
  * AIPlayer is ...
  */
 public class AIPlayer implements Player
 {
+	private Move move;
 	private char mark;
-	private Random random;
 	
 	/**
 	 * Purpose: 
@@ -35,19 +33,19 @@ public class AIPlayer implements Player
 	 */
 	public AIPlayer(char c)
 	{
-		// TODO Auto-generated constructor stub
+		this.mark = c;
 	}
 
 	@Override
 	public Move getMove(Board board)
 	{
-		return null;
+		return this.move;
 	}
 
 	@Override
 	public char getMark()
 	{
-		return 0;
+		return 'O';
 	}
 	
 }

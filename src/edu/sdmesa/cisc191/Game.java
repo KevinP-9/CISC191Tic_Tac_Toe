@@ -34,6 +34,7 @@ public class Game
 	private static GameValidator validator; //Game has-a GameValidator
 	private LinkedList<Move> moveHistory; //Game has-a move history
 	private Move buttonMove; //Game has-a relationship with Move
+	private boolean isAIGame;
 	
 	//constructor that sets the instance variables
 	public Game(Board gameBoard, Player playerX, Player playerO)
@@ -44,6 +45,12 @@ public class Game
 		this.currentPlayer = playerX; //first player will always be player X
 		validator = new GameValidator();
 		moveHistory = new LinkedList<>();
+		if(playerO instanceof AIPlayer) {
+			isAIGame = true;
+		}
+		else {
+			isAIGame = false;
+		}
 	}
 	
 	//if the current player is player X ,then player O will now be the current player
@@ -117,6 +124,11 @@ public class Game
 	public LinkedList<Move> getMoveHistory()
 	{
 		return moveHistory;
+	}
+	
+	//returns if it is an AI game or not
+	public boolean getIsAIGame() {
+		return isAIGame;
 	}
 	
 	

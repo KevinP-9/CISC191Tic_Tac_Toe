@@ -52,8 +52,11 @@ public class TicTacToeGUI extends JFrame{
 		//if human player option is selected then Player O will be a human player, else it will be an AIPlayer
 		if(mode == 0)
 		{
+			System.out.println("Human player...");
 			playerO = new HumanPlayer('O');
 		}
+		// possibly add a case where if neither is selected to throw error??? ex: when they click x out of the app
+		// to deal with that situation as well...
 		else
 		{
 			playerO = new AIPlayer('O');
@@ -82,16 +85,24 @@ public class TicTacToeGUI extends JFrame{
 		//GridLayout to display buttons in grid format
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(3,3));
-		for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
-               
-            	buttons[row][col] = new MarkButton(row, col, game); // empty for now, will have X or O behind each button
-                buttons[row][col].setFont(new Font("Arial", Font.BOLD, 60));
-                buttonPanel.add(buttons[row][col]);
-                
-            }
-            
-        }
+		if(game.getIsAIGame()) {
+			for (int row = 0; row < 3; row++) {
+	            for (int col = 0; col < 3; col++) {
+	            	buttons[row][col] = new MarkButton(row, col, game, this);
+	                buttons[row][col].setFont(new Font("Arial", Font.BOLD, 60));
+	                buttonPanel.add(buttons[row][col]);
+	            }
+	        }
+		}
+		else {
+			for (int row = 0; row < 3; row++) {
+	            for (int col = 0; col < 3; col++) {
+	            	buttons[row][col] = new MarkButton(row, col, game); // empty for now, will have X or O behind each button
+	                buttons[row][col].setFont(new Font("Arial", Font.BOLD, 60));
+	                buttonPanel.add(buttons[row][col]);
+	            }
+	        }
+		}
         
 		//want tic tac toe grid in the center of the layout
         this.add(buttonPanel, BorderLayout.CENTER);
@@ -123,6 +134,10 @@ public class TicTacToeGUI extends JFrame{
 
         this.setVisible(true);
         
+	}
+	
+	public MarkButton[][] getButtons() {
+		return this.buttons;
 	}
 	
     public static void main(String[] args) {
