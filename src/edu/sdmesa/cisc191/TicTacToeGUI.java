@@ -48,10 +48,12 @@ public class TicTacToeGUI extends JFrame{
 		while (mode == JOptionPane.CLOSED_OPTION)
 			{
 			mode = JOptionPane.showOptionDialog(null, "Choose game mode:", "Game Setup", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-			 if (mode == JOptionPane.CLOSED_OPTION) {
+				if (mode == JOptionPane.CLOSED_OPTION) 
+				{
 			        int confirm = JOptionPane.showConfirmDialog(null, "You must choose a mode to start the game.\nExit application?", "Confirm Exit", JOptionPane.YES_NO_OPTION);
 
-			        if (confirm == JOptionPane.YES_OPTION) {
+			        if (confirm == JOptionPane.YES_OPTION) 
+			        {
 			            System.exit(0);
 			        }
 			 	}
