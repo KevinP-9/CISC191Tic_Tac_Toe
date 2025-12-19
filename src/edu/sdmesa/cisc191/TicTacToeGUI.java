@@ -9,7 +9,8 @@
 * Morelli, R., & Walde, R. (2016).
 * Java, Java, Java: Object-Oriented Problem Solving
 * https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
-*
+* https://docs.oracle.com/javase/8/docs/api/javax/swing/JOptionPane.html
+* https://www.geeksforgeeks.org/java/java-joptionpane/
 * Version: 2025-10-28
 */
 package edu.sdmesa.cisc191;
@@ -45,10 +46,22 @@ public class TicTacToeGUI extends JFrame{
 		//Main frame setup
 		String[] options = {"Human vs Human", "Human vs AI"}; //options that will be used for our option pane
 		//creates an option pane where the user picks whether they will go against a human or ai player
-		int mode = JOptionPane.showOptionDialog(this, "Choose game mode: ", "Game Setup", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+		//if the dialog box is closed without an option being chosen, they are prompted to exit and the game will not start until a mode is picked
+		int mode = JOptionPane.CLOSED_OPTION;
+		while (mode == JOptionPane.CLOSED_OPTION)
+			{
+			mode = JOptionPane.showOptionDialog(null, "Choose game mode:", "Game Setup", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+			 if (mode == JOptionPane.CLOSED_OPTION) {
+			        int confirm = JOptionPane.showConfirmDialog(null, "You must choose a mode to start the game.\nExit application?", "Confirm Exit", JOptionPane.YES_NO_OPTION);
+
+			        if (confirm == JOptionPane.YES_OPTION) {
+			            System.exit(0);
+			        }
+			 	}
+			}
 		board = new Board(); //new board instance
 		Player playerX = new HumanPlayer('X'); //Player X is always a human player
-		Player playerO;
+		Player playerO = null;
 		//if human player option is selected then Player O will be a human player, else it will be an AIPlayer
 		if(mode == 0)
 		{
@@ -56,7 +69,7 @@ public class TicTacToeGUI extends JFrame{
 			playerO = new HumanPlayer('O');
 		}
 		// possibly add a case where if neither is selected to throw error??? ex: when they click x out of the app
-		// to deal with that situation as well...
+		// to deal with that situation as well...(fixed)
 		else
 		{
 			playerO = new AIPlayer('O');

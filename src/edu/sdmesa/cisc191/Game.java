@@ -117,7 +117,8 @@ public class Game
 		
 	}
 	//returns the game validator
-	public GameValidator getGameValidator() {
+	public GameValidator getGameValidator() 
+	{
 		return validator;
 	}
 	//returns move history
@@ -127,7 +128,8 @@ public class Game
 	}
 	
 	//returns if it is an AI game or not
-	public boolean getIsAIGame() {
+	public boolean getIsAIGame() 
+	{
 		return isAIGame;
 	}
 	
