@@ -1,6 +1,6 @@
 /**
 * Lead Author(s):
-* @author Kevin Plascencia; student ID
+* @author Kevin Plascencia; 5550131998
 * @author Michelle; 5550132043
 *
 * References:

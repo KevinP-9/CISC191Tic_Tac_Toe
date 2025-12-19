@@ -30,7 +30,6 @@ import javax.swing.JPanel;
  * (what the user views and interacts with)
  *
  * TicTacToeGUI is-a JFrame
- * TicTacToeGUI is a ...
  */
 public class TicTacToeGUI extends JFrame{
 
