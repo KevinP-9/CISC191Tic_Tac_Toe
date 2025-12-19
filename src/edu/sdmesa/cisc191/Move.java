@@ -1,10 +1,9 @@
 /**
 * Lead Author(s):
 * @author Kevin Plascencia; student ID
-* @author Michelle Khaliqi; student ID
+* @author Michelle Khaliqi; 5550132043
 *
-* Other Contributors:
-*
+* 
 * References:
 * Morelli, R., & Walde, R. (2016).
 * Java, Java, Java: Object-Oriented Problem Solving

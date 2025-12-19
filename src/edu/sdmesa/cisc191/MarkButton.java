@@ -1,9 +1,8 @@
 /**
 * Lead Author(s):
 * @author Kevin Plascencia; student ID
-* @author Michelle Khaliqi; student ID
+* @author Michelle Khaliqi; 5550132043
 * 
-* Other Contributors: N/A
 * 
 * References:
 * Morelli, R., & Walde, R. (2016).

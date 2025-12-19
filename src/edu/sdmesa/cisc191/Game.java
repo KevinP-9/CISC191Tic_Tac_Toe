@@ -1,7 +1,7 @@
 /**
 * Lead Author(s):
 * @author Kevin Plascencia
-* @author Michelle Khaliqi; student ID
+* @author Michelle Khaliqi; 5550132043
 *
 * Other Contributors:
 *
@@ -20,10 +20,12 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 
 /**
- * Purpose: The responsibility of Game is ...
+ * Purpose: The responsibility of Game is to manage overall tic tac toe
+ * maintaining the board
+ * controlling each players moves
+ * tracking move history
  *
- * Game is-a ...
- * Game is ...
+ 
  */
 public class Game
 {
